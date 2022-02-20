@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tables</title>
+        <style type="text/css">
+            body {
+                font-family: sans-serif;
+            }
+
+            .responsive-table {
+                max-width: 100%;
+                overflow-x: auto;
+            }
+
+            .table-main {
+                border-collapse: collapse;
+                width: 800px
+            }
+
+            .table-main th,
+            .table-main td {
+                padding: 5px;
+                border: 2px solid #bbb;
+                text-align: left;
+            }
+
+            .table-main caption {
+                caption-side: bottom;
+                text-align: right;
+                font-style: italic;
+                font-size: 14px;
+                margin: 5px 0;
+            }
+
+            .table-main thead,
+            .table-main tfoot {
+                background-color: #ccc;
+                text-transform: capitalize;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="responsive-table">
+            <table class="table-main">
+                <caption>Title of the table</caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Qty.</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Chair</td>
+                        <td>Furniture</td>
+                        <td>3</td>
+                        <td>U$50</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Table</td>
+                        <td>Furniture</td>
+                        <td>1</td>
+                        <td>U$150</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Mug</td>
+                        <td>Utilities</td>
+                        <td>10</td>
+                        <td>U$5</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">total:</td>
+                        <td>U$400</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div class="responsive-table">
+    </body>
+</html>

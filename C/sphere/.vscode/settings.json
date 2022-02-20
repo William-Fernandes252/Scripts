@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "mersenne.h": "c",
+        "experiment.h": "c"
+    }
+}

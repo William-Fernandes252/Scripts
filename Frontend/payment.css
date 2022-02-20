@@ -1,0 +1,134 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: purple;
+    color: purple;
+    position: absolute center;
+}
+
+::placeholder {
+    color: purple;
+    opacity: 0.75;
+    font-family:'Courier New', Courier, monospace;
+}
+
+h1, h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+h1 {
+    text-shadow: 2px 2px 0 purple;
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #000;
+}
+
+form {
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+div+div {
+    margin-top: 1em;
+}
+
+label span {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+
+input, textarea {
+    font: 1em sans-serif;
+    width: 250px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus{
+    box-shadow: 0 0 10px purple;
+    outline: none;
+}
+
+input[type=checkbox], input[type=radio] {
+    width: auto;
+    border: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #000;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+    resize: vertical;
+}
+
+fieldset {
+    width: 250px;
+    box-sizing: border-box;
+    margin: auto;
+    border: 1px solid #999;
+}
+
+fieldset > legend {
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+#contact-info > li {
+    margin: 5px 0 5px 0;
+}
+
+#submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 15px;
+    background-color: purple;
+    border: 2px solid purple;
+    border-radius: 5px;
+    padding: 7px;
+    color: white;
+    font-family: 'Courier New';
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.15s ease-in-out;
+}
+
+button:hover {
+    background-color: white;
+    color: purple;
+}
+
+label {
+  position: relative;
+}
+
+#payment-info-section {
+    align-items: left;
+    justify-content: left;
+}

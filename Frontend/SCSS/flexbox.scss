@@ -1,0 +1,40 @@
+$max-width: 600px;
+$sm-background-color: rgba(50,50,50, 1);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: Arial, Helvetica;
+    font-weight: bold;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: space-evenly;
+    background-color: gray;
+    border: 5px solid black;
+    margin: 10% auto;
+    width: 80%;
+    height: 80%;
+
+    @media screen and (max-width: $max-width) {
+        background-color: $sm-background-color;
+    }
+}
+
+.flex-item {
+    background-color: springgreen;
+    font-size: 20px;
+    padding: 20px;
+    width: 30.33%;
+    border: 5px solid black;
+    margin: 10px;
+}

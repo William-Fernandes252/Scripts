@@ -1,0 +1,103 @@
+$font-stack: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+
+%navigation-container {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+@mixin theme($theme: black, $content: white) {
+    background-color: $theme;
+    color: $content
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-bar {
+    
+    @extend %navigation-container;
+    
+    ul {
+        display: flex;
+        flex-grow: wrap;
+        list-style: none;
+        @include theme;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: $font-stack;
+            display: block;
+            padding: 20px;
+            text-transform: uppercase;
+            transition: all 0.25s ease-in-out;
+        }
+
+        a:hover {
+            @include theme($theme: white, $content: black);
+            font-size: 1.1em;
+        }
+
+        a:active {
+            @include theme($theme: red, $content: white);
+            font-size: 1.1em;
+        }
+    }
+
+    #session-nav a {
+        text-transform: capitalize;
+    }
+
+}
+
+#main-content {
+    font-family: $font-stack;
+    text-align: justify;
+    padding-top: 60px;
+
+    .session-container {
+        margin: 20px;
+
+        .product-grid {
+            @include theme($theme: white, $content: black);
+            display: grid;
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        .grid-item {
+            box-sizing: border-box;
+            @include theme($theme: white, $content: black);
+            border: 1px solid black;
+            border-radius: 10px;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.15s ease-in-out;
+        }
+
+        .grid-item:hover {
+            @include theme($theme: black, $content: white);
+        }
+
+        .grid-item:active {
+            @include theme($theme: red, $content: white);
+        }
+    }
+}

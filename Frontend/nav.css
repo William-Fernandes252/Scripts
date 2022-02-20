@@ -1,0 +1,90 @@
+.nav-bar {
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-bar ul {
+  display: flex;
+  flex-grow: wrap;
+  list-style: none;
+  background-color: black;
+  color: white;
+}
+.nav-bar ul a {
+  color: white;
+  text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  display: block;
+  padding: 20px;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+}
+.nav-bar ul a:hover {
+  background-color: white;
+  color: black;
+  font-size: 1.1em;
+}
+.nav-bar ul a:active {
+  background-color: red;
+  color: white;
+  font-size: 1.1em;
+}
+.nav-bar #session-nav a {
+  text-transform: capitalize;
+}
+
+#main-content {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  text-align: justify;
+  padding-top: 60px;
+}
+#main-content .session-container {
+  margin: 20px;
+}
+#main-content .session-container .product-grid {
+  background-color: white;
+  color: black;
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-columns: auto auto auto auto;
+}
+#main-content .session-container .grid-item {
+  box-sizing: border-box;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+}
+#main-content .session-container .grid-item:hover {
+  background-color: black;
+  color: white;
+}
+#main-content .session-container .grid-item:active {
+  background-color: red;
+  color: white;
+}
+
+/*# sourceMappingURL=nav.css.map */
