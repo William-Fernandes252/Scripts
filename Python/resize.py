@@ -27,7 +27,7 @@ def resizeimages(path, new_width, *options):
                 print(f'Image {file_path} already is resized.')
                 continue
             
-            if extension.lower() == '.jpg' and '-c' in options: 
+            if extension.lower() in '.jpg' and '-c' in options: 
                 img = Image.open(file_path)
                 width, height = img.size 
                 new_height = round(new_width * height / width)
@@ -68,14 +68,21 @@ if __name__ == '__main__':
         )
         exit(1)
         
+    options = ['-c', '-o']
+        
     try:
         path = str(argv[1])
         width = int(argv[2])
-        option = str(argv[3])
     except:
         print('Invalid arguments.')
         exit(1)
+        
+    option = None
+    if argv[3]:
+        option = argv[3]
+        if option not in options:
+            raise ValueError('Invalid option.')
 
-    resizeimages(path, width)
+    resizeimages(path, width, option)
         
     
