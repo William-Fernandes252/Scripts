@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from locale import setlocale, LC_ALL
-from calendar import mdays
+import calendar
+
 
 setlocale(LC_ALL, 'pt_BR.utf-8')
 
@@ -30,4 +31,4 @@ print('Timedelta: ', dif)
 formatted = date.strftime('%A, %d de %B de %Y.')
 print('In text:', formatted)
 
-print('Last day of the current month:', mdays[month])
+print('Last day of the current month:', calendar.mdays[month])
